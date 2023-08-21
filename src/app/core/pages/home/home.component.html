@@ -1,0 +1,27 @@
+<div class="po-wrapper">
+  <po-toolbar p-title="Aplicação de Testes Protheus"></po-toolbar>
+
+  <po-menu
+    [p-logo]="logo"
+    [p-collapsed]="true"
+    [p-filter]="true"
+    [p-menus]="menus"
+  ></po-menu>
+
+  <router-outlet></router-outlet>
+</div>
+
+<!-- <po-page-default p-title="AppName">
+  <p>AppName page</p>
+  <po-button
+    p-label="Carregamento por 8 segundos"
+    (p-click)="handleLoading()"
+  ></po-button>
+</po-page-default> -->
+
+<!-- <po-loading-overlay
+  *ngIf="isLoading"
+  [p-screen-lock]="true"
+  p-text="Aguarde 8 segundos"
+>
+</po-loading-overlay> -->
