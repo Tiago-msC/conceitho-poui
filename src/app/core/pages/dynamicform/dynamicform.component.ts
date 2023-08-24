@@ -35,25 +35,30 @@ export class DynamicformComponent {
   public handleFormStructView() {
     this.isLoading = true;
     this.fwFormStructView.getFormStructView(this.alias).subscribe((data) => {
-      // Pegando os campos do fomulário
+
       const fieldsResponse: fwFormStructViewFields[] = data[this.alias].fields;
 
       fieldsResponse.forEach((item: fwFormStructViewFields) => {
-        console.log(item);
+        // console.log(item);
         const optionsItems: any[] = [];
 
         if (item.combobox.length > 0) {
           const combobox = item.combobox.filter(
             (element) => element.trim() !== ''
           );
-
+            
           combobox.forEach((item) => {
             let option = item.split('=');
 
-            optionsItems.push({
-              state: option[1],
-              code: option[0],
-            });
+            if (combobox.length > 3) {
+              optionsItems.push({
+                state: option[1],
+                code: option[0],
+              });
+            } else {
+              optionsItems.push(option[1])
+            }
+
           });
         }
 
