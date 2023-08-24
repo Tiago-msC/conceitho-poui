@@ -3,13 +3,11 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { DynamicformComponent } from './dynamicform.component';
 
 import {
-  PoMenuModule,
   PoModule,
-  PoPageModule,
-  PoToolbarModule,
 } from '@po-ui/ng-components';
 import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { FormsModule } from '@angular/forms';
 
 describe('DynamicformComponent', () => {
   let component: DynamicformComponent;
@@ -17,7 +15,7 @@ describe('DynamicformComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PoModule, RouterTestingModule, HttpClientTestingModule],
+      imports: [PoModule, RouterTestingModule, FormsModule, HttpClientTestingModule],
       declarations: [DynamicformComponent],
     }).compileComponents();
 
