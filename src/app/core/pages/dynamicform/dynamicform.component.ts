@@ -76,6 +76,7 @@ export class DynamicformComponent {
       });
 
       this.isLoading = false;
-    });
+    }, error => this.isLoading = false
+    );
   }
 }
