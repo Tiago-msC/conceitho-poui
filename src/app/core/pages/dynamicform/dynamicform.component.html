@@ -10,6 +10,7 @@
       p-help="É um alias"
       p-icon="po-icon-user"
       [(ngModel)]="alias"
+      (ngModelChange)="alias = $event.toUpperCase()"
     ></po-input>
     <po-button
       class="po-md-3 po-mt-4"
@@ -24,8 +25,9 @@
   >
   </po-loading-overlay>
 
-  <div class="po-mt-4">
+  <div class="po-mt-3">
     <po-dynamic-form
+    class="po-mt-3"
       *ngIf="fields.length > 0"
       #dynamicForm
       p-auto-focus="name"
