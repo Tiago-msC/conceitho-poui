@@ -23,5 +23,11 @@ export class HomeComponent {
       icon: 'po-icon po-icon-clipboard',
       shortLabel: 'home',
     },
+    {
+      label: 'Notas Fiscais',
+      link: '/nf',
+      icon: 'po-icon po-icon-clipboard',
+      shortLabel: 'home',
+    },
   ];
 }

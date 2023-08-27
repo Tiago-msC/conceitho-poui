@@ -14,6 +14,13 @@ const routes: Routes = [
             (m) => m.DynamicformModule
           ),
       },
+      {
+        path: 'nf',
+        loadChildren: () =>
+          import('../nfc-grid/nfc-grid.module').then(
+            (m) => m.NfcGridModule
+          ),
+      },
     ],
   },
 ];
