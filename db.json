@@ -1,308 +1,44 @@
 {
   "columns": [
     {
-        "property": "chnfe",
-        "label": "Chave da NF-e"
+      "property": "chnfe",
+      "label": "Chave da NF-e"
     },
     {
-        "property": "nfa_serial",
-        "label": "Número Serial"
+      "property": "nfa_serial",
+      "label": "Número Serial"
     },
     {
-        "property": "ide_cuf",
-        "label": "Código da UF"
+      "property": "ide_cuf",
+      "label": "Código da UF"
     },
     {
-        "property": "ide_cnf",
-        "label": "Código da CNF"
+      "property": "ide_natop",
+      "label": "Natureza da Operação"
     },
     {
-        "property": "ide_natop",
-        "label": "Natureza da Operação"
+      "property": "ide_mod",
+      "label": "Modelo"
     },
     {
-        "property": "ide_indpag",
-        "label": "Indicador de Pagamento"
+      "property": "ide_serie",
+      "label": "Série"
     },
     {
-        "property": "ide_mod",
-        "label": "Modelo"
+      "property": "ide_nnf",
+      "label": "Número da NF-e"
     },
     {
-        "property": "ide_serie",
-        "label": "Série"
+      "property": "ide_demi",
+      "label": "Data de Emissão"
     },
     {
-        "property": "ide_nnf",
-        "label": "Número da NF-e"
+      "property": "ide_tpnf",
+      "label": "Tipo de NF"
     },
     {
-        "property": "ide_demi",
-        "label": "Data de Emissão"
-    },
-    {
-        "property": "ide_dsaient",
-        "label": "Data de Saída/Entrada"
-    },
-    {
-        "property": "ide_hsaient",
-        "label": "Hora de Saída/Entrada"
-    },
-    {
-        "property": "ide_tpnf",
-        "label": "Tipo de NF"
-    },
-    {
-        "property": "ide_cmunfg",
-        "label": "Código do Município de FG"
-    },
-    {
-        "property": "ide_tpimp",
-        "label": "Tipo de Impressão"
-    },
-    {
-        "property": "ide_tpemis",
-        "label": "Tipo de Emissão"
-    },
-    {
-        "property": "ide_tpamb",
-        "label": "Tipo de Ambiente"
-    },
-    {
-        "property": "ide_finnfe",
-        "label": "Finalidade da NF-e"
-    },
-    {
-        "property": "ide_procemi",
-        "label": "Processo de Emissão"
-    },
-    {
-        "property": "ide_verproc",
-        "label": "Versão do Processo"
-    },
-    {
-        "property": "ide_dhcont",
-        "label": "Data e Hora da Contingência"
-    },
-    {
-        "property": "ide_xjust",
-        "label": "Justificativa"
-    },
-    {
-        "property": "dhregdpec",
-        "label": "Data e Hora do Registro DPEC"
-    },
-    {
-        "property": "nregdpec",
-        "label": "Número do Registro DPEC"
-    },
-    {
-        "property": "emit_cnpj",
-        "label": "CNPJ do Emitente"
-    },
-    {
-        "property": "emit_cpf",
-        "label": "CPF do Emitente"
-    },
-    {
-        "property": "emit_xnome",
-        "label": "Nome do Emitente"
-    },
-    {
-        "property": "emit_xfant",
-        "label": "Nome Fantasia do Emitente"
-    },
-    {
-        "property": "emit_fax",
-        "label": "Fax do Emitente"
-    },
-    {
-        "property": "emit_email",
-        "label": "Email do Emitente"
-    },
-    {
-        "property": "enderemit_xlgr",
-        "label": "Logradouro do Emitente"
-    },
-    {
-        "property": "enderemit_nro",
-        "label": "Número do Logradouro do Emitente"
-    },
-    {
-        "property": "enderemit_xcpl",
-        "label": "Complemento do Logradouro do Emitente"
-    },
-    {
-        "property": "enderemit_xbairro",
-        "label": "Bairro do Emitente"
-    },
-    {
-        "property": "enderemit_cmun",
-        "label": "Código do Município do Emitente"
-    },
-    {
-        "property": "enderemit_xmun",
-        "label": "Município do Emitente"
-    },
-    {
-        "property": "enderemit_uf",
-        "label": "UF do Emitente"
-    },
-    {
-        "property": "enderemit_cep",
-        "label": "CEP do Emitente"
-    },
-    {
-        "property": "enderemit_cpais",
-        "label": "Código do País do Emitente"
-    },
-    {
-        "property": "enderemit_xpais",
-        "label": "País do Emitente"
-    },
-    {
-        "property": "enderemit_fone",
-        "label": "Telefone do Emitente"
-    },
-    {
-        "property": "enderemit_cregtrib",
-        "label": "Código do CREG do Emitente"
-    },
-    {
-        "property": "dest_cnpj",
-        "label": "CNPJ do Destinatário"
-    },
-    {
-        "property": "dest_cpf",
-        "label": "CPF do Destinatário"
-    },
-    {
-        "property": "dest_xnome",
-        "label": "Nome do Destinatário"
-    },
-    {
-        "property": "dest_fone",
-        "label": "Telefone do Destinatário"
-    },
-    {
-        "property": "dest_email",
-        "label": "Email do Destinatário"
-    },
-    {
-        "property": "enderdest_xlgr",
-        "label": "Logradouro do Destinatário"
-    },
-    {
-        "property": "enderdest_nro",
-        "label": "Número do Logradouro do Destinatário"
-    },
-    {
-        "property": "enderdest_xcpl",
-        "label": "Complemento do Logradouro do Destinatário"
-    },
-    {
-        "property": "enderdest_xbairro",
-        "label": "Bairro do Destinatário"
-    },
-    {
-        "property": "enderdest_cmun",
-        "label": "Código do Município do Destinatário"
-    },
-    {
-        "property": "enderdest_xmun",
-        "label": "Município do Destinatário"
-    },
-    {
-        "property": "enderdest_uf",
-        "label": "UF do Destinatário"
-    },
-    {
-        "property": "enderdest_cep",
-        "label": "CEP do Destinatário"
-    },
-    {
-        "property": "enderdest_cpais",
-        "label": "Código do País do Destinatário"
-    },
-    {
-        "property": "enderdest_xpais",
-        "label": "País do Destinatário"
-    },
-    {
-        "property": "enderdest_cregtrib",
-        "label": "Código do CREG do Destinatário"
-    },
-    {
-        "property": "enderent_xlgr",
-        "label": "Logradouro do Local de Entrega"
-    },
-    {
-        "property": "enderent_nro",
-        "label": "Número do Logradouro do Local de Entrega"
-    },
-    {
-        "property": "enderent_xcpl",
-        "label": "Complemento do Logradouro do Local de Entrega"
-    },
-    {
-        "property": "enderent_xbairro",
-        "label": "Bairro do Local de Entrega"
-    },
-    {
-        "property": "enderent_cmun",
-        "label": "Código do Município do Local de Entrega"
-    },
-    {
-        "property": "enderent_xmun",
-        "label": "Município do Local de Entrega"
-    },
-    {
-        "property": "enderent_uf",
-        "label": "UF do Local de Entrega"
-    },
-    {
-        "property": "enderent_cep",
-        "label": "CEP do Local de Entrega"
-    },
-    {
-        "property": "enderent_cpais",
-        "label": "Código do País do Local de Entrega"
-    },
-    {
-        "property": "enderent_xpais",
-        "label": "País do Local de Entrega"
-    },
-    {
-        "property": "enderent_fone",
-        "label": "Telefone do Local de Entrega"
-    },
-    {
-        "property": "det",
-        "label": "Detalhamento dos Produtos e Serviços"
-    },
-    {
-        "property": "imposto",
-        "label": "Impostos"
-    },
-    {
-        "property": "total",
-        "label": "Total da NF-e"
-    },
-    {
-        "property": "transp",
-        "label": "Transportadora"
-    },
-    {
-        "property": "cobr",
-        "label": "Cobrança"
-    },
-    {
-        "property": "pag",
-        "label": "Pagamento"
-    },
-    {
-        "property": "infadic",
-        "label": "Informações Adicionais"
+      "property": "emit_xnome",
+      "label": "Nome do Emitente"
     }
-]
+  ]
 }
