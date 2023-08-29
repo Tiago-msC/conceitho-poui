@@ -16,13 +16,13 @@ export class BasicProtheusServicesService {
   private httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
-      Authorization: `Bearer ${this.acessToken}`,
+      Authorization: `Basic YWRtaW46YWRtaW4=`,
     }),
   };
 
   getFormStructView(alias: string): Observable<any> {
     return this.http.get(
-      `${this.urlApi}/api/framework/v1/basicProtheusServices/fwformstructview?alias=${alias}`,
+      `${this.urlApi}api/framework/v1/basicProtheusServices/fwformstructview?alias=${alias}`,
       this.httpOptions
     );
   }

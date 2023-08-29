@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./nfc-grid.component.scss'],
 })
 export class NfcGridComponent implements OnInit, OnDestroy {
-  readonly apiUrl: string = environment.apiprotheus + 'nfa0019001';
+  readonly apiUrl: string = environment.apifluentnf + 'nfa0019001';
   readonly columnsApiUrl: string = 'https://my-json-server.typicode.com/Tiago-msC/conceitho-poui/columns';
 
   loading: boolean = false;
