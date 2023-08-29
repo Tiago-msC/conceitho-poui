@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { PoNotificationService } from '@po-ui/ng-components';
 import { forkJoin } from 'rxjs';
@@ -9,7 +9,12 @@ import { environment } from 'src/environments/environment';
   templateUrl: './nfc-grid.component.html',
   styleUrls: ['./nfc-grid.component.scss'],
 })
-export class NfcGridComponent implements OnInit, OnDestroy {
+export class NfcGridComponent implements OnInit {
+
+  private offset: number = 1;
+  private limit: number = 13;
+  private headers!: HttpHeaders;
+
   readonly apiUrl: string = environment.apifluentnf + 'nfa0019001';
   readonly columnsApiUrl: string = 'https://my-json-server.typicode.com/Tiago-msC/conceitho-poui/columns';
 
@@ -25,15 +30,34 @@ export class NfcGridComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit() {
+    let params: any = {
+      offset: 1,
+      limit: this.limit,
+    };
+    this.loadData(params)
+  }
+
+  private loadData(params: { page?: number, search?: string } = { }) {
+
+    this.headers = new HttpHeaders()
+    this.headers.append('Range', (this.offset - 1) + '-' + (this.limit - 1))
+
     this.loading = true;
     forkJoin([
       this.http.get(this.columnsApiUrl),
-      this.http.get(this.apiUrl),
+      this.http.get(this.apiUrl, {headers: this.headers, params: params }),
     ]).subscribe({
       next: (results: any[]) => {
         // Faça algo com os resultados combinados
         this.columns = results[0];
-        this.data = results[1];
+
+        if (this.data.length > 0) {
+          console.log('aqui');
+          const newDatas = this.data.concat(results[1])
+          this.data = newDatas;
+        } else {
+          this.data = results[1];
+        }
       },
       error: (err) => {
         console.error(err);
@@ -48,7 +72,10 @@ export class NfcGridComponent implements OnInit, OnDestroy {
     });
   }
 
-  ngOnDestroy(): void {
-    console.log('Destruindo');
+  showMore() {
+    this.offset = this.offset + this.limit;
+    let params: any = { offset: this.offset, limit: this.limit };
+
+    this.loadData(params);
   }
 }

@@ -1,10 +1,9 @@
 <po-page-default p-title="Notas Fiscais">
-  <po-grid  [p-data]="data" [p-columns]="columns"> </po-grid>
+  <po-grid [p-data]="data" [p-columns]="columns"> </po-grid>
 
+  <po-button *ngIf="data.length > 0" class="po-m-1 center" p-label="Carregar mais resultados"
+    (p-click)="showMore()"></po-button>
 
-  <po-loading-overlay *ngIf="loading"
-    [p-screen-lock]="false"
-    p-text="Carregando" >
-</po-loading-overlay>
-
+  <po-loading-overlay *ngIf="loading" [p-screen-lock]="true" p-text="Carregando">
+  </po-loading-overlay>
 </po-page-default>
