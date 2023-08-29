@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { PoNotificationService } from '@po-ui/ng-components';
 import { forkJoin } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-nfc-grid',
@@ -9,10 +10,8 @@ import { forkJoin } from 'rxjs';
   styleUrls: ['./nfc-grid.component.scss'],
 })
 export class NfcGridComponent implements OnInit, OnDestroy {
-  readonly apiUrl: string =
-    'https://db31-191-209-30-228.ngrok-free.app/nfa0019001';
-  readonly columnsApiUrl: string =
-    'https://my-json-server.typicode.com/Tiago-msC/conceitho-poui/columns';
+  readonly apiUrl: string = environment.apiprotheus + 'nfa0019001';
+  readonly columnsApiUrl: string = 'https://my-json-server.typicode.com/Tiago-msC/conceitho-poui/columns';
 
   loading: boolean = false;
 
