@@ -24,10 +24,10 @@ export class HomeComponent {
       shortLabel: 'home',
     },
     {
-      label: 'Notas Fiscais',
+      label: 'NF-e',
       link: '/nf',
-      icon: 'po-icon po-icon-clipboard',
-      shortLabel: 'home',
+      icon: 'po-icon po-icon-sale',
+      shortLabel: 'nfe',
     },
   ];
 }
