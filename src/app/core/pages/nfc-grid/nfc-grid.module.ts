@@ -5,6 +5,7 @@ import { NfcGridRoutingModule } from './nfc-grid-routing.module';
 import { NfcGridComponent } from './nfc-grid.component';
 import { PoModule } from '@po-ui/ng-components';
 import { HttpClientModule } from '@angular/common/http';
+import { PoPageDynamicSearchModule } from '@po-ui/ng-templates';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
     CommonModule,
     PoModule,
     HttpClientModule,
+    PoPageDynamicSearchModule,
     NfcGridRoutingModule
   ]
 })
