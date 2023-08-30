@@ -16,7 +16,7 @@ export class NfcGridComponent implements OnInit {
   private headers!: HttpHeaders;
 
   readonly apiUrl: string = environment.apifluentnf + 'nfa0019001';
-  readonly columnsApiUrl: string = 'https://my-json-server.typicode.com/Tiago-msC/conceitho-poui/columns';
+  readonly columnsApiUrl: string = 'https://my-json-server.typicode.com/Tiago-msC/columns-json-data/columns';
 
   loading: boolean = false;
 
